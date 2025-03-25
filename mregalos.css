@@ -1,0 +1,91 @@
+/* 🔹 Sección de Mesa de Regalos */
+.mesa-regalos {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+        /* Usar !important */
+}
+
+/* 🔹 Título de la sección */
+.mesa-regalos h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* 🔹 Separador vertical */
+.mesa-regalos .separadorlinea {
+    width: 2px;
+    height: 40px;
+    background-color: #333;
+    margin: 10px auto;
+}
+
+/* 🔹 Texto introductorio */
+.mesa-regalos p {
+    font-size: 16px;
+    color: #444;
+    max-width: 70%;
+    margin: 0 auto 20px;
+}
+
+/* 🔹 Contenedor del ícono y el texto */
+.mesa-regalos .icono-regalo {
+    margin: 20px 0;
+}
+
+/* 🔹 Imagen del sobre */
+.mesa-regalos .icono-regalo img {
+    width: 40px;
+    height: auto;
+}
+
+/* 🔹 Texto debajo del ícono */
+.mesa-regalos .icono-regalo p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* 🔹 Información de transferencia */
+.mesa-regalos .transferencia {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* 🔹 Título de la transferencia */
+.mesa-regalos .transferencia .titulo {
+    font-weight: bold;
+}
+
+/* 🔹 Nombre del beneficiario */
+.mesa-regalos .transferencia .nombre {
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* 🔹 Nombre del banco */
+.mesa-regalos .transferencia .banco {
+    margin-top: 5px;
+}
+
+/* 🔹 Número de cuenta */
+.mesa-regalos .transferencia .cuenta {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+    .mesa-regalos p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .mesa-regalos .transferencia .cuenta {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,112 @@
+.container {
+    width: 100%;
+    /* Adjust width as needed */
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the box */
+    position: relative;
+    margin: 0 auto;
+    /* Centers the white box */
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers the circles */
+    width: 100%;
+}
+
+/* Vertical Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 47%;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #5b664d;
+    transform: translateX(-50%);
+}
+
+/* Event Items */
+.event {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    /* Aligns text to the right */
+    padding-left: 50%;
+    /* Moves text to the right of the center */
+    margin: 20px 0;
+}
+
+/* Circles */
+.event::before {
+    content: "";
+    position: absolute;
+    left: 47%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #5b664d;
+}
+
+/* Titles */
+.event h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    /* Space between text and circle */
+    /*white-space: nowrap;*/
+    /* Prevents wrapping */
+}
+
+/* Time */
+.event p {
+    font-size: 20px;
+    font-weight: bold;
+    word-break: break-all;
+    text-align: left;
+    white-space: normal;
+    margin-top: 25px;
+    margin-left: -55px;
+        /* Makes the <p> behave like an inline element while allowing block-level styling /
+        text-align: center; / Centers the text inside the <p> */
+}
+
+/* Time */
+.event h3 {
+    font-size: 20px;
+    font-weight: bold;
+    word-break: break-all;
+    text-align: left;
+    white-space: normal;
+    margin-top: 25px;
+    margin-left: -55px;
+    /* Makes the <p> behave like an inline element while allowing block-level styling /
+        text-align: center; / Centers the text inside the <p> */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Adjusts for smaller screens */
+    }
+
+    .event {
+        padding-left: 55%;
+        /* Adjusts text placement */
+    }
+}
