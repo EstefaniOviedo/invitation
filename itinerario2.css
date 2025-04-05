@@ -1,56 +1,43 @@
 .container {
     width: 100%;
-    /* Adjust width as needed */
     padding: 50px 20px;
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center the box */
     position: relative;
     margin: 0 auto;
-    /* Centers the white box */
 }
 
+/* Contenedor principal del timeline */
 .timeline {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centers the circles */
     width: 100%;
 }
 
-/* Vertical Line */
+/* Línea vertical en pantallas grandes */
 .timeline::before {
     content: "";
     position: absolute;
-    left: 47%;
+    left: 40%;
+    /* Ajusta este valor hasta que esté alineado con los íconos */
     top: 0;
     width: 3px;
     height: 100%;
-    background-color: #5b664d;
+    background-color: #000000;
     transform: translateX(-50%);
+    z-index: -1;
 }
 
-/* Event Items */
-.event {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: flex-start;
-    /* Aligns text to the right */
-    padding-left: 50%;
-    /* Moves text to the right of the center */
-    margin: 20px 0;
-}
-
-/* Circles */
+/* Círculos */
 .event::before {
     content: "";
     position: absolute;
-    left: 47%;
+    left: 40%;
+    /* Debe coincidir con la línea */
     top: 50%;
     transform: translate(-50%, -50%);
     width: 15px;
@@ -60,53 +47,41 @@
     border: 3px solid #5b664d;
 }
 
-/* Titles */
+/* Evento (texto) */
+.event {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 45%;
+    /* Texto a la derecha del icono/línea */
+    margin: 20px 0;
+}
+
+/* Texto de los eventos */
 .event h2 {
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
-    margin-bottom: 5px;
-    text-align: center;
-    /* Space between text and circle */
-    /*white-space: nowrap;*/
-    /* Prevents wrapping */
-}
-
-/* Time */
-.event p {
-    font-size: 20px;
-    font-weight: bold;
-    word-break: break-all;
     text-align: left;
-    white-space: normal;
-    margin-top: 25px;
-    margin-left: -55px;
-        /* Makes the <p> behave like an inline element while allowing block-level styling /
-        text-align: center; / Centers the text inside the <p> */
 }
 
-/* Time */
-.event h3 {
-    font-size: 20px;
-    font-weight: bold;
-    word-break: break-all;
-    text-align: left;
-    white-space: normal;
-    margin-top: 25px;
-    margin-left: -55px;
-    /* Makes the <p> behave like an inline element while allowing block-level styling /
-        text-align: center; / Centers the text inside the <p> */
-}
-
-/* Responsive Adjustments */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-        /* Adjusts for smaller screens */
+    .timeline::before {
+        left: 15%;
+        /* Línea se mueve a la izquierda */
+        transform: translateX(-50%);
     }
 
     .event {
-        padding-left: 55%;
-        /* Adjusts text placement */
+        padding-left: 30%;
+        /* Texto más cerca del borde izquierdo */
+    }
+
+    .event::before {
+        left: 15%;
+        /* Íconos alineados con nueva posición de la línea */
     }
 }
