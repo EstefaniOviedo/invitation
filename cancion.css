@@ -1,0 +1,26 @@
+.separadorCancion {
+    width: 100%;
+    height: 60px;
+    background-color: #8D9E6F;
+    display: flex;
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+}
+
+.textoCancion {
+    color: white;
+    /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+    /* Puedes cambiar el peso de la fuente si lo deseas */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    /* Sombra del texto */
+}
+
+.textoCancion:hover {
+    /* Subraya cuando el cursor pasa sobre el texto */
+    cursor: pointer;
+    /* Apunta a una mano cuando pasas por encima */
+}
